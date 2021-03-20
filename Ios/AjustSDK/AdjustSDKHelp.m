@@ -45,7 +45,7 @@ static bool Debug = true;
     NSDictionary *plistDic = [[NSBundle mainBundle] infoDictionary];
     NSString* key = [plistDic valueForKey:@"adjust_key"];
     NSString* preAdjustKey = [plistDic valueForKey:@"adjust_preinstallKey"];
-    NSString *yourAppToken = Debug ? @"" : key;
+    NSString *yourAppToken = Debug ? @"yourAppToken" : key;
     NSString *environment = Debug ? ADJEnvironmentSandbox : ADJEnvironmentProduction;
     ADJConfig *adjustConfig = [ADJConfig configWithAppToken:yourAppToken
                                                 environment:environment];
