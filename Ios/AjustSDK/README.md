@@ -3,7 +3,7 @@
 -https://github.com/adjust/ios_sdk
 ## 2.接入步骤：
 1. 下载SDK：通过[Adjust GitHub](https://github.com/adjust/ios_sdk/releases) 下载文件名为 **AdjustSdkImDynamic.framework.zip** 的压缩包
-2. 将SDK添加到Xcode工程，添加方式，直接将文件夹拉到Xcode工程中，如图：![image](https://github.com/zxxia2016/SDKExample/tree/main/Ios/AjustSDK/Images/1.jpg)
+2. 将SDK添加到Xcode工程，添加方式，直接将文件夹拉到Xcode工程中，如图：![image](https://github.com/zxxia2016/SDKExample/tree/main/Ios/AjustSDK/Image/1.jpg)
 3. 编码部分:
    1. AppController.h中添加头文件,并添加以下代码
     ```
