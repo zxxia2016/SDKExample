@@ -41,7 +41,7 @@
 	</array>
    ```
 4. 编码部分:
-   1. AppController.mm中引入文件头     
+    1. AppController.mm中引入文件头     
     ``` 
     #import "FacebookSDKMgr.h"
     ```
