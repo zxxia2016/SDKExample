@@ -79,5 +79,5 @@
     
     5. 打点
     ```
-    -(void)logEvent: (NSString *)eventType andData: (NSString *)data 
+    -(void)logEvent:(NSString*) eventName number:(NSNumber *)number currencyType:(NSString*) currencyType
     ```

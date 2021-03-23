@@ -67,6 +67,10 @@ typedef NS_ENUM(NSInteger, ResultType) {
     
     [self initLogin];
     [self initShare];
+    
+//    [FBSDKSettings setAdvertiserTrackingEnabled:YES];
+    [FBSDKSettings setAutoLogAppEventsEnabled:YES];
+//    [FBSDKSettings setAdvertiserIDCollectionEnabled:@YES];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url options:(nonnull NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
@@ -280,7 +284,22 @@ typedef NS_ENUM(NSInteger, ResultType) {
     
     [self notifyToJs:ResultTypeShareCancel params:@"share cancel"];
 }
-
+-(void)logEvent:(NSString*) eventName number:(NSNumber *)number currencyType:(NSString*) currencyType {
+    // 记录购买事件
+    // [FBSDKAppEvents logPurchase:1 currency:@"USD"];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:number forKey:FBSDKAppEventParameterNameNumItems];
+    if (currencyType.length > 0) {
+        [params setObject:FBSDKAppEventParameterNameCurrency forKey:currencyType];
+    }
+    [FBSDKAppEvents logEvent:eventName parameters:params];
+    double count = [number doubleValue];
+    if (count > 0) {
+        [FBSDKAppEvents logEvent:eventName valueToSum:count];
+    }
+    
+}
 #pragma mark - 通知js
 
 /**

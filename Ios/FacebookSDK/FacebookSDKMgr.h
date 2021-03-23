@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)share:(NSString *)shareInfo;
 
+-(void)logEvent:(NSString*) eventName number:(NSNumber *)number currencyType:(NSString*) currencyType;
+
 @end
 
 NS_ASSUME_NONNULL_END
