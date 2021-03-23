@@ -1,6 +1,6 @@
 # AjustSDK 说明
 ## 1.接入参考官方地址：
--https://github.com/adjust/android_sdk
+- https://github.com/adjust/android_sdk
 ## 2.接入步骤：
 1. 添加依赖库,权限，混淆等
    1. **build.gradle**中加入以下代码
