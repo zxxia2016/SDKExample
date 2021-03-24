@@ -10,12 +10,16 @@
 
     [[IAPMgr getInstance] initObserver];
    ```
+   2. 按钮点击事件调用支付
+   ```
+   [[IAPMgr getInstance] onPay:0 money:1 count:1];
+   ```
 3. IAPMgr.m文件
    1. 初始化代码
    ```
    -(void) initObserver
    ```
-   1. 支付代码
+   2. 支付代码
    ```
    - (void) onPay:(int)account money:(int)money  count:(int)count
    ```
