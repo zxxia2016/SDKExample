@@ -4,7 +4,10 @@
 ## 2.接入步骤：
 1. 下载SDK：通过[facebook GitHub](https://github.com/facebook/facebook-ios-sdk/releases) 下载文件名为 **FacebookSDK_Dynamic.framework.zip** 的压缩包
 2. 将**FBSDKCoreKit.framework** **FBSDKLoginKit.framework** **FBSDKShareKit.framework**添加到Xcode工程，添加方式，直接将文件夹拉到Xcode工程中，如图：![image](https://raw.githubusercontent.com/zxxia2016/SDKExample/main/Ios/FacebookSDK/Image/1.jpg)，注意图中箭头的部分；如果是oc的项目，务必把图中的选项设置成Yes，![image](https://raw.githubusercontent.com/zxxia2016/SDKExample/main/Ios/FacebookSDK/Image/2.jpg)
-3. Info.plist中添加如下代码,xxxx部分对应填写
+3. 发布ipa报错：**IPA processing failed**
+   1. 原因：SDK 不包含某些cpu架构问题导致的
+   2. 解决方案：https://www.jianshu.com/p/42c3a7cbdb3f
+4. Info.plist中添加如下代码,xxxx部分对应填写
    ```
    <key>CFBundleURLTypes</key>
 	<array>
