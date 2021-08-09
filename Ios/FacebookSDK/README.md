@@ -84,3 +84,7 @@
     ```
     -(void)logEvent:(NSString*) eventName number:(NSNumber *)number currencyType:(NSString*) currencyType
     ```
+6. 其它问题：
+   1. 登录提示：feature unavailable facebook login is currently unavailable for this app，解决方式参考链接：https://stackoverflow.com/questions/25872434/facebook-login-is-currently-unavailable
+      1. 实际解决方式：Please go to App Review > Permission Feature and give advance access to "public_profile"
+      2. 即申请更高级访问权限
