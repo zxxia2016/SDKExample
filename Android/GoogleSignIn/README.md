@@ -13,3 +13,6 @@
          1. ```GoogleSignIn.getClient```
          2. ```signIn```
          3. ```onActivityResult```
+   3. 遇到的问题：
+      1. ```signInResult:failed code=10```,检查秘钥；检查步骤：参考链接：https://stackoverflow.com/questions/49450140/google-signin-api-exception-10
+      2. ```Google Sign In for Android: Cannot resolve RC_SIGN_IN```, 这个只是个唯一标识，你自己随便定义一个大一点的值即可
